@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Application Form | Mr. Rol-Air LLC.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6a61c.js" crossorigin="anonymous"></script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(90deg, #10b981, #059669);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <section id="application-form" class="py-20">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+        <!-- Header -->
+        <div class="gradient-bg text-white p-8">
+          <h2 class="text-3xl font-bold mb-2">Join Our Team</h2>
+          <p>Complete the form below to apply for a position at Mr. Rol-Air LLC.</p>
+        </div>
+
+        <!-- Form -->
+        <form id="jobForm" action="https://formspree.io/f/mgvyrwab" method="POST" enctype="multipart/form-data" class="p-8">
+          <input type="hidden" name="_subject" value="New Job Application">
+          <input type="hidden" name="_template" value="table">
+          
+
+          <!-- Position -->
+          <div class="mb-6">
+            <label for="position" class="block text-gray-700 font-bold mb-2">Position Applying For*</label>
+            <select id="position" name="position" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+              <option value="">Select a position</option>
+              <option value="Data Entry Clerk">Data Entry Clerk</option>
+              <option value="Payroll Clerk">Payroll Clerk</option>
+              <option value="Virtual Personal Assistant">Virtual Personal Assistant</option>
+              <option value="Customer Service Representative">Customer Service Representative</option>
+              <option value="Construction Foreman">Construction Foreman</option>
+              <option value="Heavy Machine Operations Manager">Heavy Machine Operations Manager</option>
+              <option value="Other">Other (please specify)</option>
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name*</label>
+              <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name*</label>
+              <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="email" class="block text-gray-700 font-bold mb-2">Email Address*</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 font-bold mb-2">Phone Number*</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="mb-6">
+            <label for="address" class="block text-gray-700 font-bold mb-2">Street Address</label>
+            <input type="text" id="address" name="address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div>
+              <label for="city" class="block text-gray-700 font-bold mb-2">City</label>
+              <input type="text" id="city" name="city" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label for="state" class="block text-gray-700 font-bold mb-2">State</label>
+              <input type="text" id="state" name="state" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+            <div>
+              <label for="zip" class="block text-gray-700 font-bold mb-2">ZIP Code</label>
+              <input type="text" id="zip" name="zip" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+
+
+          <!-- Cover Letter -->
+          <div class="mb-6">
+            <label for="coverLetter" class="block text-gray-700 font-bold mb-2">Cover Letter</label>
+            <textarea id="coverLetter" name="coverLetter" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500" placeholder="Tell us why you'd be a great fit..."></textarea>
+          </div>
+
+          <!-- Experience -->
+          <div class="mb-6">
+            <label for="experience" class="block text-gray-700 font-bold mb-2">Relevant Experience*</label>
+            <textarea id="experience" name="experience" required rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500" placeholder="Describe your relevant experience and skills..."></textarea>
+          </div>
+
+          <!-- References -->
+          <div class="mb-6">
+            <label for="references" class="block text-gray-700 font-bold mb-2">Professional References</label>
+            <textarea id="references" name="references" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500" placeholder="Name, Relationship, Contact Info"></textarea>
+          </div>
+
+          <!-- Terms -->
+          <div class="mb-6">
+            <p>Please ensure you send your resume to our email after completing your application.</p> <br>
+            <label class="flex items-center">
+              <input type="checkbox" id="agree" name="agree" required class="w-4 h-4 border border-gray-300 rounded focus:ring-2 focus:ring-green-500">
+              <span class="ml-2 text-gray-700 text-sm">I certify the information provided is accurate and complete.*</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button type="submit" class="gradient-bg text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transform hover:scale-105 transition">
+              Submit Application <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+      document.getElementById("jobForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          window.location.href = "https://Mr. Rol-Airhvacservices.com/thanks.html";
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      });
+</script>
+
+</body>
+</html>
