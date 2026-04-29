@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Rol-Air, LLC | Heating & Air Conditioning - Del Valle, TX</title>
+    <meta name="description" content="Mr. Rol-Air, LLC - 29 years of trusted HVAC services. Heating, air conditioning, repairs & maintenance. BBB A+ Accredited. Serving Del Valle, TX and nationwide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50:'#eff6ff', 100:'#dbeafe', 200:'#bfdbfe', 300:'#93c5fd', 400:'#60a5fa', 500:'#1e6fc2', 600:'#1759a1', 700:'#0e4178', 800:'#0c315c', 900:'#081f3a' },
+                        accent: { 50:'#fff7ed', 100:'#ffedd5', 200:'#fed7aa', 300:'#fdba74', 400:'#fb923c', 500:'#f97316', 600:'#ea580c', 700:'#c2410c', 800:'#9a3412', 900:'#7c2d12' },
+                        cool: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 400:'#38bdf8', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1' },
+                        warm: { 50:'#fefce8', 100:'#fef9c3', 200:'#fef08a', 300:'#fde047', 400:'#facc15', 500:'#eab308', 600:'#ca8a04', 700:'#a16207' },
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+
+        /* Hero parallax */
+        .hero-bg {
+            background: linear-gradient(135deg, #081f3a 0%, #0e4178 40%, #1759a1 70%, #1e6fc2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Floating shapes */
+        .float-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.06;
+            animation: floatAnim 8s ease-in-out infinite;
+        }
+        @keyframes floatAnim {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        /* Service card hover */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #1e6fc2, #0ea5e9);
+        }
+        .service-icon {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Stat counter */
+        .stat-item {
+            position: relative;
+        }
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent);
+        }
+        .stat-item:last-child::after { display: none; }
+
+        /* Navbar */
+        .nav-scrolled {
+            background: rgba(8, 31, 58, 0.98) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa, #0ea5e9, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* BBB Badge pulse */
+        .bbb-pulse {
+            animation: bbbGlow 3s ease-in-out infinite;
+        }
+        @keyframes bbbGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.4); }
+        }
+
+        /* Branch pin animation */
+        .branch-pin {
+            transition: all 0.3s ease;
+        }
+        .branch-pin:hover {
+            transform: scale(1.15);
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* CTA shimmer */
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+            transform: rotate(45deg);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Testimonial card */
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #081f3a; }
+        ::-webkit-scrollbar-thumb { background: #1e6fc2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1759a1; }
+
+        /* Logo placeholder styling */
+        .logo-placeholder {
+            transition: all 0.3s ease;
+        }
+        .logo-placeholder:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-body">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO - Replace the src below with your company logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <!-- 
+                        ============================================
+                        🔁 LOGO CHANGE INSTRUCTIONS:
+                        Replace the <div class="logo-placeholder"> block below
+                        with an <img> tag pointing to your logo file.
+                        Example: <img src="your-logo.png" alt="Mr. Rol-Air Logo" class="h-12 w-auto">
+                        ============================================
+                    -->
+                    <div class="logo-placeholder flex items-center justify-center h-12 w-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/20 transition-all">
+                        <svg class="h-7 w-7 text-cool-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                        </svg>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="text-white font-heading font-800 text-xl tracking-tight">Mr. Rol-Air</span>
+                        <span class="block text-cool-300 text-xs font-medium tracking-widest uppercase">LLC • HVAC Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Home</a>
+                    <a href="#about" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">About</a>
+                    <a href="#services" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Services</a>
+                    <a href="#locations" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Locations</a>
+                    <a href="#reviews" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Reviews</a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition-all">Contact</a>
+                    <a href="tel:+15125551234" class="ml-4 btn-shimmer inline-flex items-center px-6 py-2.5 bg-accent-500 hover:bg-accent-600 text-white text-sm font-semibold rounded-xl transition-all shadow-lg shadow-accent-500/25">
+                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                        Call Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-all">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-primary-900/98 backdrop-blur-xl z-50 shadow-2xl">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-10">
+                    <span class="text-white font-heading font-700 text-lg">Menu</span>
+                    <button id="mobileMenuClose" class="text-white/60 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-all">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div class="space-y-2">
+                    <a href="#home" class="mobile-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Home</a>
+                    <a href="#about" class="mobile-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">About</a>
+                    <a href="#services" class="mobile-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Services</a>
+                    <a href="#locations" class="mobile-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Locations</a>
+                    <a href="#reviews" class="mobile-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Reviews</a>
+                    <a href="#contact" class="mobile-link block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all font-medium">Contact</a>
+                </div>
+                <a href="tel:+15125551234" class="mt-8 btn-shimmer flex items-center justify-center w-full px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-all shadow-lg">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                    Call (512) 555-1234
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative">
+        <!-- Floating shapes -->
+        <div class="float-shape bg-white w-64 h-64 -top-20 -right-20" style="animation-delay: 0s;"></div>
+        <div class="float-shape bg-cool-400 w-96 h-96 -bottom-32 -left-32" style="animation-delay: 2s;"></div>
+        <div class="float-shape bg-accent-400 w-48 h-48 top-1/3 right-1/4" style="animation-delay: 4s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-cool-200 text-sm font-medium">29 Years of Trusted Service</span>
+                    </div>
+
+                    <h1 class="font-heading font-900 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-6">
+                        Your Comfort,<br>
+                        <span class="gradient-text">Our Commitment</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-blue-100/80 max-w-xl mb-8 leading-relaxed mx-auto lg:mx-0">
+                        Since 1997, Mr. Rol-Air, LLC has been Del Valle's most trusted name in heating and air conditioning. BBB A+ accredited with service branches across the nation.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="btn-shimmer inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg rounded-2xl transition-all shadow-xl shadow-accent-500/30 hover:shadow-accent-500/50">
+                            Get Free Estimate
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </a>
+                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 transition-all">
+                            Our Services
+                        </a>
+                    </div>
+
+                    <!-- Trust badges -->
+                    <div class="flex items-center gap-6 mt-10 justify-center lg:justify-start">
+                        <div class="bbb-pulse flex items-center px-4 py-2 bg-amber-500/20 backdrop-blur-sm rounded-xl border border-amber-400/30">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-amber-400 mr-2"></i>
+                            <span class="text-amber-200 font-bold text-sm">BBB A+</span>
+                        </div>
+                        <div class="flex items-center px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-xl border border-green-400/30">
+                            <i data-lucide="award" class="w-5 h-5 text-green-400 mr-2"></i>
+                            <span class="text-green-200 font-bold text-sm">Since 1997</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="hidden lg:flex justify-center items-center relative">
+                    <div class="relative w-96 h-96">
+                        <!-- Central circle -->
+                        <div class="absolute inset-8 bg-gradient-to-br from-cool-400/20 to-accent-400/20 rounded-full backdrop-blur-sm border border-white/10 flex items-center justify-center">
+                            <div class="text-center">
+                                <i data-lucide="thermometer-sun" class="w-16 h-16 text-cool-300 mx-auto mb-3"></i>
+                                <span class="text-white font-heading font-700 text-xl">HVAC</span>
+                                <span class="block text-cool-300 text-sm">Pros</span>
+                            </div>
+                        </div>
+                        <!-- Orbiting items -->
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 float-anim" style="animation: floatAnim 4s ease-in-out infinite;">
+                            <i data-lucide="flame" class="w-8 h-8 text-accent-400"></i>
+                            <span class="text-white text-xs font-medium block mt-1">Heating</span>
+                        </div>
+                        <div class="absolute top-1/2 -right-4 -translate-y-1/2 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20" style="animation: floatAnim 5s ease-in-out infinite; animation-delay: 1s;">
+                            <i data-lucide="snowflake" class="w-8 h-8 text-cool-300"></i>
+                            <span class="text-white text-xs font-medium block mt-1">Cooling</span>
+                        </div>
+                        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20" style="animation: floatAnim 4.5s ease-in-out infinite; animation-delay: 2s;">
+                            <i data-lucide="wrench" class="w-8 h-8 text-amber-400"></i>
+                            <span class="text-white text-xs font-medium block mt-1">Repairs</span>
+                        </div>
+                        <div class="absolute top-1/2 -left-4 -translate-y-1/2 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20" style="animation: floatAnim 5.5s ease-in-out infinite; animation-delay: 3s;">
+                            <i data-lucide="settings" class="w-8 h-8 text-green-400"></i>
+                            <span class="text-white text-xs font-medium block mt-1">Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="absolute bottom-0 left-0 right-0 bg-primary-900/80 backdrop-blur-md border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
+                    <div class="stat-item text-center px-4">
+                        <div class="font-heading font-800 text-3xl sm:text-4xl text-white" data-count="29">0</div>
+                        <div class="text-blue-200/70 text-sm mt-1">Years in Business</div>
+                    </div>
+                    <div class="stat-item text-center px-4">
+                        <div class="font-heading font-800 text-3xl sm:text-4xl text-white" data-count="15000">0</div>
+                        <div class="text-blue-200/70 text-sm mt-1">Happy Customers</div>
+                    </div>
+                    <div class="stat-item text-center px-4">
+                        <div class="font-heading font-800 text-3xl sm:text-4xl text-white" data-count="50">0</div>
+                        <div class="text-blue-200/70 text-sm mt-1">Service Branches</div>
+                    </div>
+                    <div class="stat-item text-center px-4">
+                        <div class="font-heading font-800 text-3xl sm:text-4xl text-accent-400">A+</div>
+                        <div class="text-blue-200/70 text-sm mt-1">BBB Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cool-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Image side -->
+                <div class="reveal relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="http://static.photos/technology/640x360/77" alt="HVAC technician at work" class="w-full h-80 lg:h-[480px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent"></div>
+                        <!-- Badge overlay -->
+                        <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="flex items-center justify-center w-14 h-14 bg-accent-500 rounded-xl">
+                                    <i data-lucide="shield-check" class="w-7 h-7 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-heading font-800 text-2xl text-primary-900">A+</div>
+                                    <div class="text-gray-500 text-sm">BBB Accredited</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating year badge -->
+                    <div class="absolute -top-4 -right-4 lg:-right-6 bg-accent-500 text-white rounded-2xl p-5 shadow-xl shadow-accent-500/30">
+                        <div class="font-heading font-900 text-3xl">29</div>
+                        <div class="text-sm font-medium opacity-90">Years</div>
+                    </div>
+                </div>
+
+                <!-- Content side -->
+                <div class="reveal">
+                    <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-primary-100 text-primary-600 text-sm font-semibold mb-4">
+                        <i data-lucide="info" class="w-4 h-4 mr-1.5"></i>
+                        About Our Company
+                    </div>
+
+                    <h2 class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight mb-6">
+                        Trusted HVAC Excellence Since <span class="text-accent-500">1997</span>
+                    </h2>
+
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            <strong class="text-primary-800">Mr. Rol-Air, LLC</strong> was founded on January 1st, 1997, in the heart of Del Valle, Texas. For nearly three decades, we have been the cornerstone of comfort for residential and commercial clients throughout the greater Austin metropolitan area and beyond.
+                        </p>
+                        <p>
+                            As a <strong class="text-primary-800">Limited Liability Company</strong> with an unwavering commitment to quality, we've grown from a local operation into a nationally recognized HVAC service provider. Our <strong class="text-primary-800">BBB A+ accreditation</strong> stands as a testament to our dedication to integrity, transparency, and customer satisfaction—values that have been the bedrock of our business since day one.
+                        </p>
+                        <p>
+                            Today, Mr. Rol-Air operates <strong class="text-primary-800">over 50 service branches</strong> across multiple states and proudly undertakes commercial and residential contracts from coast to coast—including <strong class="text-primary-800">New York, Las Vegas, Florida</strong>, and everywhere in between. No matter the scale or location, our certified technicians deliver the same level of precision, professionalism, and care that has defined us for 29 years.
+                        </p>
+                    </div>
+
+                    <!-- Feature list -->
+                    <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-primary-900">Licensed & Insured</span>
+                                <p class="text-sm text-gray-500 mt-0.5">Full coverage in all operating states</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-primary-900">24/7 Emergency Service</span>
+                                <p class="text-sm text-gray-500 mt-0.5">Always available when you need us</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-primary-900">EPA Certified</span>
+                                <p class="text-sm text-gray-500 mt-0.5">Environmentally responsible practices</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
+                            </div>
+                            <div>
+                                <span class="font-semibold text-primary-900">Free Estimates</span>
+                                <p class="text-sm text-gray-500 mt-0.5">No-obligation project quotes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-20 lg:py-28 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-cool-100 text-cool-700 text-sm font-semibold mb-4">
+                    <i data-lucide="settings-2" class="w-4 h-4 mr-1.5"></i>
+                    What We Offer
+                </div>
+                <h2 class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight mb-4">
+                    Comprehensive HVAC <span class="text-accent-500">Solutions</span>
+                </h2>
+                <p class="text-gray-500 text-lg">
+                    From routine maintenance to full system installations, we provide end-to-end heating and cooling services for homes and businesses alike.
+                </p>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Heating -->
+                <div class="service-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal group">
+                    <div class="service-icon w-16 h-16 rounded-2xl bg-accent-100 flex items-center justify-center mb-6">
+                        <i data-lucide="flame" class="w-8 h-8 text-accent-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Heating</h3>
+                    <p class="text-gray-500 leading-relaxed mb-6">
+                        Stay warm during harsh winters with our expert furnace and heating system installation, repair, and replacement services.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 mr-2 flex-shrink-0"></i>
+                            Furnace Installation
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 mr-2 flex-shrink-0"></i>
+                            Heat Pump Service
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500 mr-2 flex-shrink-0"></i>
+                            Duct Heating Repair
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Air Conditioning -->
+                <div class="service-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal group">
+                    <div class="service-icon w-16 h-16 rounded-2xl bg-cool-100 flex items-center justify-center mb-6">
+                        <i data-lucide="snowflake" class="w-8 h-8 text-cool-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Air Conditioning</h3>
+                    <p class="text-gray-500 leading-relaxed mb-6">
+                        Beat the Texas heat with our top-tier AC installation and replacement. We carry all major brands and energy-efficient models.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-cool-500 mr-2 flex-shrink-0"></i>
+                            AC Installation
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-cool-500 mr-2 flex-shrink-0"></i>
+                            Central Air Systems
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-cool-500 mr-2 flex-shrink-0"></i>
+                            Ductless Mini-Splits
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Repairs -->
+                <div class="service-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal group">
+                    <div class="service-icon w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-8 h-8 text-red-500"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Repairs</h3>
+                    <p class="text-gray-500 leading-relaxed mb-6">
+                        Fast, reliable HVAC repair services available 24/7. Our certified technicians diagnose and fix issues right the first time.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-red-500 mr-2 flex-shrink-0"></i>
+                            Emergency Repairs
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-red-500 mr-2 flex-shrink-0"></i>
+                            Compressor Fix
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-red-500 mr-2 flex-shrink-0"></i>
+                            Refrigerant Leak
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Maintenance -->
+                <div class="service-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal group">
+                    <div class="service-icon w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Maintenance</h3>
+                    <p class="text-gray-500 leading-relaxed mb-6">
+                        Preventative maintenance plans that extend system lifespan, improve efficiency, and save you money on costly breakdowns.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Seasonal Tune-Ups
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Filter Replacement
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 mr-2 flex-shrink-0"></i>
+                            Performance Audit
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-16 bg-gradient-to-r from-primary-800 to-primary-600 rounded-3xl p-8 lg:p-12 relative overflow-hidden reveal">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+                    <div class="text-center lg:text-left">
+                        <h3 class="font-heading font-800 text-2xl lg:text-3xl text-white mb-2">Need HVAC Service? We're Here to Help!</h3>
+                        <p class="text-blue-200/80">Get a free, no-obligation estimate from our expert team today.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-shimmer inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-2xl transition-all shadow-lg shadow-accent-500/30">
+                            Get Free Estimate
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </a>
+                        <a href="tel:+15125551234" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-2xl border border-white/20 transition-all">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                            (512) 555-1234
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-accent-100 text-accent-700 text-sm font-semibold mb-4">
+                    <i data-lucide="star" class="w-4 h-4 mr-1.5"></i>
+                    Why Choose Us
+                </div>
+                <h2 class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight mb-4">
+                    The Mr. Rol-Air <span class="text-accent-500">Difference</span>
+                </h2>
+                <p class="text-gray-500 text-lg">
+                    We don't just service HVAC systems—we build lasting relationships based on trust, quality, and reliability.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="reveal text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="clock" class="w-8 h-8 text-primary-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">29 Years of Experience</h3>
+                    <p class="text-gray-500 leading-relaxed">Nearly three decades of hands-on expertise means we've seen and solved every HVAC challenge imaginable.</p>
+                </div>
+
+                <div class="reveal text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="badge-check" class="w-8 h-8 text-amber-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">BBB A+ Accredited</h3>
+                    <p class="text-gray-500 leading-relaxed">Our A+ rating with the Better Business Bureau reflects our unwavering commitment to ethical business practices.</p>
+                </div>
+
+                <div class="reveal text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-cool-100 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-cool-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Nationwide Coverage</h3>
+                    <p class="text-gray-500 leading-relaxed">With 50+ branches and contracts across the U.S., professional HVAC service is always close by.</p>
+                </div>
+
+                <div class="reveal text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="zap" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Fast Response Time</h3>
+                    <p class="text-gray-500 leading-relaxed">Emergency doesn't wait—and neither do we. Our teams respond quickly to restore your comfort ASAP.</p>
+                </div>
+
+                <div class="reveal text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="users" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Certified Technicians</h3>
+                    <p class="text-gray-500 leading-relaxed">Every technician on our team is factory-trained, EPA certified, and background-checked for your peace of mind.</p>
+                </div>
+
+                <div class="reveal text-center p-8 rounded-3xl bg-gray-50 hover:bg-white hover:shadow-xl border border-transparent hover:border-gray-100 transition-all duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-accent-100 flex items-center justify-center mx-auto mb-5">
+                        <i data-lucide="handshake" class="w-8 h-8 text-accent-600"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-primary-900 mb-3">Honest & Transparent</h3>
+                    <p class="text-gray-500 leading-relaxed">No hidden fees, no surprise charges. We provide upfront pricing and explain all options before any work begins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LOCATIONS / BRANCHES SECTION ==================== -->
+    <section id="locations" class="py-20 lg:py-28 bg-primary-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/10 text-cool-300 text-sm font-semibold mb-4">
+                    <i data-lucide="globe" class="w-4 h-4 mr-1.5"></i>
+                    Our Reach
+                </div>
+                <h2 class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-4">
+                    Nationwide <span class="text-accent-400">Service Coverage</span>
+                </h2>
+                <p class="text-blue-200/70 text-lg">
+                    Headquartered in Del Valle, TX with branches and contracts across the United States. Wherever you are, Mr. Rol-Air delivers.
+                </p>
+            </div>
+
+            <!-- Featured locations -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- HQ -->
+                <div class="reveal bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-accent-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">HQ</span>
+                        <i data-lucide="building-2" class="w-5 h-5 text-cool-300"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-white mb-2">Del Valle, TX</h3>
+                    <p class="text-blue-200/60 text-sm mb-4">Corporate Headquarters since 1997</p>
+                    <div class="space-y-2 text-sm text-blue-200/70">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-400 flex-shrink-0"></i>
+                            <span>Del Valle, TX 78617-5108</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent-400 flex-shrink-0"></i>
+                            <span>(512) 555-1234</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New York -->
+                <div class="reveal bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-cool-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Contract</span>
+                        <i data-lucide="landmark" class="w-5 h-5 text-cool-300"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-white mb-2">New York</h3>
+                    <p class="text-blue-200/60 text-sm mb-4">Commercial & Residential Contracts</p>
+                    <div class="space-y-2 text-sm text-blue-200/70">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-cool-400 flex-shrink-0"></i>
+                            <span>Greater NYC Metro Area</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-cool-400 flex-shrink-0"></i>
+                            <span>Large-Scale Projects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Las Vegas -->
+                <div class="reveal bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-accent-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Contract</span>
+                        <i data-lucide="landmark" class="w-5 h-5 text-cool-300"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-white mb-2">Las Vegas</h3>
+                    <p class="text-blue-200/60 text-sm mb-4">Desert Climate HVAC Specialists</p>
+                    <div class="space-y-2 text-sm text-blue-200/70">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent-400 flex-shrink-0"></i>
+                            <span>Clark County, NV</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-accent-400 flex-shrink-0"></i>
+                            <span>Hospitality & Resort HVAC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Florida -->
+                <div class="reveal bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 transition-all group">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full uppercase tracking-wider">Contract</span>
+                        <i data-lucide="landmark" class="w-5 h-5 text-cool-300"></i>
+                    </div>
+                    <h3 class="font-heading font-700 text-xl text-white mb-2">Florida</h3>
+                    <p class="text-blue-200/60 text-sm mb-4">Humidity & Cooling Experts</p>
+                    <div class="space-y-2 text-sm text-blue-200/70">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-green-400 flex-shrink-0"></i>
+                            <span>Statewide Coverage, FL</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-green-400 flex-shrink-0"></i>
+                            <span>Residential & Commercial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More locations strip -->
+            <div class="reveal text-center">
+                <p class="text-blue-200/50 text-sm mb-4 uppercase tracking-widest font-medium">Additional Service Branches</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Houston, TX</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Dallas, TX</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">San Antonio, TX</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Austin, TX</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Phoenix, AZ</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Atlanta, GA</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Chicago, IL</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Denver, CO</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Seattle, WA</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Miami, FL</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">Orlando, FL</span>
+                    <span class="px-4 py-2 bg-white/5 rounded-xl text-blue-200/70 text-sm border border-white/10 hover:bg-white/10 transition-all cursor-default">+ 40 more</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REVIEWS / TESTIMONIALS ==================== -->
+    <section id="reviews" class="py-20 lg:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-amber-100 text-amber-700 text-sm font-semibold mb-4">
+                    <i data-lucide="message-square" class="w-4 h-4 mr-1.5"></i>
+                    Customer Reviews
+                </div>
+                <h2 class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight mb-4">
+                    What Our Customers <span class="text-accent-500">Say</span>
+                </h2>
+                <p class="text-gray-500 text-lg">
+                    Don't just take our word for it—hear from the thousands of satisfied customers we've served over the years.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        "Mr. Rol-Air saved us during a freezing winter night. Their emergency team arrived within 30 minutes and had our heater running perfectly. Truly the best in the business!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center">
+                            <span class="font-heading font-700 text-primary-600">JR</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-900">James Rodriguez</div>
+                            <div class="text-sm text-gray-400">Del Valle, TX</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        "We hired Mr. Rol-Air for our Las Vegas hotel renovation. Their commercial team was professional, on schedule, and the AC systems they installed are incredibly efficient. A+ work!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-accent-100 flex items-center justify-center">
+                            <span class="font-heading font-700 text-accent-600">SM</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-900">Sarah Mitchell</div>
+                            <div class="text-sm text-gray-400">Las Vegas, NV</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white rounded-3xl p-8 shadow-sm border border-gray-100 reveal">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-amber-400 fill-amber-400"></i>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        "I've used Mr. Rol-Air for my Florida rental properties for 5 years now. Their maintenance plan keeps everything running smoothly and their pricing is always fair. Highly recommended!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                            <span class="font-heading font-700 text-green-600">DW</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-900">David Williams</div>
+                            <div class="text-sm text-gray-400">Orlando, FL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-cool-100 text-cool-700 text-sm font-semibold mb-4">
+                        <i data-lucide="mail" class="w-4 h-4 mr-1.5"></i>
+                        Get In Touch
+                    </div>
+                    <h2 class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-primary-900 leading-tight mb-6">
+                        Let's Talk About Your <span class="text-accent-500">Comfort</span>
+                    </h2>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                        Whether you need a quick repair, a full system installation, or want to learn more about our maintenance plans, we're just a call or message away.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary-900 mb-1">Headquarters</h4>
+                                <p class="text-gray-500">Del Valle, TX 78617-5108</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-accent-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary-900 mb-1">Phone</h4>
+                                <p class="text-gray-500">(512) 555-1234</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cool-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-cool-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary-900 mb-1">Email</h4>
+                                <p class="text-gray-500">info@mrrolair.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary-900 mb-1">Hours</h4>
+                                <p class="text-gray-500">Mon–Fri: 7:00 AM – 7:00 PM</p>
+                                <p class="text-gray-500">Sat: 8:00 AM – 5:00 PM</p>
+                                <p class="text-accent-600 font-medium">Emergency: 24/7 Available</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BBB Badge -->
+                    <div class="bbb-pulse inline-flex items-center gap-3 px-6 py-4 bg-amber-50 rounded-2xl border border-amber-200">
+                        <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center">
+                            <span class="font-heading font-900 text-xl text-white">A+</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-900">BBB Accredited Business</div>
+                            <div class="text-sm text-gray-500">Better Business Bureau® — Since 1997</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <form id="contactForm" class="bg-gray-50 rounded-3xl p-8 lg:p-10 border border-gray-100">
+                        <h3 class="font-heading font-700 text-2xl text-primary-900 mb-2">Request a Free Estimate</h3>
+                        <p class="text-gray-500 mb-8">Fill out the form and our team will get back to you within 24 hours.</p>
+
+                        <div class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1.5">First Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1.5">Last Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white" placeholder="Doe">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white" placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white" placeholder="(512) 555-1234">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Service Needed</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white text-gray-700">
+                                    <option value="">Select a service</option>
+                                    <option value="heating">Heating Installation / Repair</option>
+                                    <option value="ac">Air Conditioning Installation / Repair</option>
+                                    <option value="maintenance">Maintenance Plan</option>
+                                    <option value="commercial">Commercial Contract</option>
+                                    <option value="emergency">Emergency Service</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white resize-none" placeholder="Tell us about your project or issue..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-shimmer flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-accent-500/25">
+                                Send Request
+                                <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+                            </button>
+                        </div>
+
+                        <!-- Success message -->
+                        <div id="formSuccess" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-center font-medium">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 inline mr-2"></i>
+                            Thank you! We'll get back to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-primary-900 pt-16 pb-8 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Company info -->
+                <div class="lg:col-span-1">
+                    <!-- LOGO - Replace with your company logo here as well -->
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="logo-placeholder flex items-center justify-center h-10 w-10 rounded-xl bg-white/10 border border-white/20">
+                            <svg class="h-6 w-6 text-cool-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-white font-heading font-800 text-lg">Mr. Rol-Air</span>
+                            <span class="block text-cool-300/80 text-xs tracking-wider">LLC</span>
+                        </div>
+                    </div>
+                    <p class="text-blue-200/60 text-sm leading-relaxed mb-5">
+                        Your trusted HVAC partner since 1997. BBB A+ accredited. Serving Del Valle, TX and nationwide.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all border border-white/10">
+                            <i data-lucide="facebook" class="w-4 h-4 text-blue-200/70"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all border border-white/10">
+                            <i data-lucide="instagram" class="w-4 h-4 text-blue-200/70"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all border border-white/10">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-blue-200/70"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all border border-white/10">
+                            <i data-lucide="youtube" class="w-4 h-4 text-blue-200/70"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-700 text-white mb-5">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-blue-200/60 hover:text-white transition-all text-sm">Home</a></li>
+                        <li><a href="#about" class="text-blue-200/60 hover:text-white transition-all text-sm">About Us</a></li>
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Services</a></li>
+                        <li><a href="#locations" class="text-blue-200/60 hover:text-white transition-all text-sm">Locations</a></li>
+                        <li><a href="#reviews" class="text-blue-200/60 hover:text-white transition-all text-sm">Reviews</a></li>
+                        <li><a href="#contact" class="text-blue-200/60 hover:text-white transition-all text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-700 text-white mb-5">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Heating Installation</a></li>
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Air Conditioning</a></li>
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Emergency Repairs</a></li>
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Preventive Maintenance</a></li>
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Commercial Contracts</a></li>
+                        <li><a href="#services" class="text-blue-200/60 hover:text-white transition-all text-sm">Ductwork Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-700 text-white mb-5">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-blue-200/60 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-accent-400 flex-shrink-0"></i>
+                            Del Valle, TX 78617-5108
+                        </li>
+                        <li class="flex items-start gap-2 text-blue-200/60 text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 mt-0.5 text-accent-400 flex-shrink-0"></i>
+                            (512) 555-1234
+                        </li>
+                        <li class="flex items-start gap-2 text-blue-200/60 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 mt-0.5 text-accent-400 flex-shrink-0"></i>
+                            info@mrrolair.com
+                        </li>
+                        <li class="flex items-start gap-2 text-blue-200/60 text-sm">
+                            <i data-lucide="clock" class="w-4 h-4 mt-0.5 text-accent-400 flex-shrink-0"></i>
+                            Mon–Sat: 7AM–7PM
+                        </li>
+                    </ul>
+                    <div class="mt-5 bbb-pulse inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 rounded-xl border border-amber-400/20">
+                        <span class="font-heading font-800 text-amber-400">A+</span>
+                        <span class="text-amber-200/80 text-xs">BBB Accredited</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-blue-200/40 text-sm text-center sm:text-left">
+                        © 2025 Mr. Rol-Air, LLC. All rights reserved. | BBB A+ Accredited Business
+                    </p>
+                    <div class="flex items-center gap-6 text-sm">
+                        <a href="#" class="text-blue-200/40 hover:text-white transition-all">Privacy Policy</a>
+                        <a href="#" class="text-blue-200/40 hover:text-white transition-all">Terms of Service</a>
+                        <a href="#" class="text-blue-200/40 hover:text-white transition-all">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING CALL BUTTON (Mobile) ==================== -->
+    <a href="tel:+15125551234" class="fixed bottom-6 right-6 z-40 lg:hidden flex items-center justify-center w-14 h-14 bg-accent-500 hover:bg-accent-600 text-white rounded-full shadow-xl shadow-accent-500/30 transition-all btn-shimmer">
+        <i data-lucide="phone" class="w-6 h-6"></i>
+    </a>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button id="backToTop" class="fixed bottom-6 right-6 z-40 hidden lg:flex items-center justify-center w-12 h-12 bg-primary-800/80 hover:bg-primary-700 text-white rounded-full shadow-lg backdrop-blur-sm transition-all border border-white/10">
+        <i data-lucide="chevron-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // ===== Navbar scroll effect =====
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 80) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+
+            // Back to top button visibility
+            if (currentScroll > 500) {
+                backToTop.classList.remove('hidden');
+                backToTop.classList.add('flex');
+            } else {
+                backToTop.classList.add('hidden');
+                backToTop.classList.remove('flex');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== Mobile Menu =====
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // ===== Scroll Reveal =====
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger the reveal animation
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== Counter Animation =====
+        const counterElements = document.querySelectorAll('[data-count]');
+        
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.count);
+            const duration = 2000;
+            const startTime = performance.now();
+            const startValue = 0;
+
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Ease out cubic
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.round(startValue + (target - startValue) * easeProgress);
+                
+                if (target >= 1000) {
+                    el.textContent = currentValue.toLocaleString() + '+';
+                } else {
+                    el.textContent = currentValue + (target === 50 ? '+' : '');
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counterElements.forEach(el => counterObserver.observe(el));
+
+        // ===== Contact Form =====
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show success message
+            formSuccess.classList.remove('hidden');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+
+        // ===== Smooth scroll for anchor links =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80; // Navbar height
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== Active nav link highlighting =====
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-white/10', 'text-white');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('bg-white/10', 'text-white');
+                }
+            });
+        });
+    </script>
+<script src="https://deepsite.hf.co/deepsite-badge.js"></script>
+</body>
+</html>
