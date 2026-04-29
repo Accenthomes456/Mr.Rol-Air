@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | Mr. Rol-Air LLC.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/a2e0e6a61c.js" crossorigin="anonymous"></script>
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .tab-button.active { border-color: #16a34a; color: #16a34a; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Careers Section -->
+  <section id="careers" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Join Our Team</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We're hiring talented individuals to help us deliver exceptional HVAC services.</p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="flex flex-wrap border-b border-gray-200 mb-8">
+        <button class="tab-button px-6 py-3 font-medium text-gray-800 border-b-2 border-green-600 text-green-600 active" data-tab="all">All Positions</button>
+        <button class="tab-button px-6 py-3 font-medium text-gray-600 hover:text-green-600" data-tab="field">Field Positions</button>
+        <button class="tab-button px-6 py-3 font-medium text-gray-600 hover:text-green-600" data-tab="office">Office Positions</button>
+        <button class="tab-button px-6 py-3 font-medium text-gray-600 hover:text-green-600" data-tab="management">Management</button>
+      </div>
+
+      <!-- Tab Contents -->
+     <div id="all" class="tab-content active">
+        
+        <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+                <h1 class="text-3xl font-bold text-indigo-700 mb-2">Payroll Clerk</h1>
+                <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+                <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+                <h3 class="text-lg text-gray-600 mb-4">Pay: 28/Hr</h3>
+        
+                  <p class="mb-4">
+            Mr. Rol-Air is seeking a reliable and detail-oriented Payroll Clerk to join our team. In this role, you will help ensure accurate and timely payroll processing for our staff.
+                  </p>
+        
+                  <p class="mb-4" x-show="showFull">
+            No prior payroll experience is necessary — we provide full training. This is an excellent opportunity to begin or grow your career in administrative finance with a supportive and growing construction company.
+                  </p>
+        
+              <!-- Hidden Content -->
+            `<div x-show="showFull" x-transition>
+                <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+                <li>Assist with preparing and processing weekly and bi-weekly payroll</li>
+                <li>Maintain accurate records of employee hours and pay adjustments</li>
+                <li>Review timesheets and ensure data accuracy</li>
+                <li>Support payroll tax and deduction handling</li>
+                <li>Handle employee payroll questions respectfully and confidentially</li>
+             </ul>
+        
+              <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>High school diploma or equivalent</li>
+              <li>Strong attention to detail and accuracy</li>
+              <li>Basic computer skills (Excel experience a plus)</li>
+              <li>Good organizational and communication skills</li>
+              <li>Trustworthy with sensitive information</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+              <li>Paid training and mentorship</li>
+              <li>Growth opportunities in admin or HR roles</li>
+              <li>Competitive pay and a supportive work environment</li>
+              <li>Paid time off and potential benefits</li>
+            </ul>
+              <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+            
+        
+            <!-- Toggle Button -->
+              <div class="text-center mt-6">
+              <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+              </button>
+              </div>
+      </div>
+
+      
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Data Entry Clerk</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Full-Time/ Part-Time</h2>
+          <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 25/Hr</h3>
+        
+          <p class="mb-4">
+            We're looking for a detail-oriented Data Entry Clerk to support our growing operations team at Mr. Rol-Air.
+            No prior experience is required — we provide full training for the right candidate.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            This position is ideal for someone who is organized, accurate, and enjoys working behind the scenes to keep information flowing efficiently. You’ll handle a variety of admin support tasks including entering and updating job records, invoices, customer details, and supply logs.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>Input data into internal systems with high accuracy</li>
+              <li>Verify, correct, and update digital records as needed</li>
+              <li>Assist with scanning, organizing, and filing digital documents</li>
+              <li>Communicate with internal teams to clarify or complete entries</li>
+              <li>Support admin team with other clerical tasks as needed</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>High school diploma or GED equivalent</li>
+              <li>Strong attention to detail and accuracy</li>
+              <li>Basic computer skills (typing, email, spreadsheets)</li>
+              <li>Ability to work independently and meet deadlines</li>
+              <li>Willingness to learn new tools and systems</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+              <li>Paid training and onboarding</li>
+              <li>Opportunities for advancement in administrative roles</li>
+              <li>Supportive team environment</li>
+              <li>Steady full-time schedule</li>
+            </ul>
+              <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+    </div>
+
+      
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Customer Service Representative</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+          <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 23/Hr</h3>
+        
+          <p class="mb-4">
+            We're hiring a friendly and professional Customer Service Representative to be the first point of contact for our clients. No experience needed — we’ll provide full training.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            As part of our team, you’ll assist clients with questions about services, schedule appointments, and follow up on inquiries. This role is perfect for someone with strong communication skills who enjoys helping people and providing great service.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>Answer phone calls and respond to emails in a professional manner</li>
+              <li>Assist clients with questions about construction and remodeling services</li>
+              <li>Schedule appointments and maintain up-to-date calendar entries</li>
+              <li>Log customer interactions and follow up on open cases</li>
+              <li>Collaborate with the office and construction teams</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>High school diploma or GED required</li>
+              <li>Strong communication and active listening skills</li>
+              <li>Friendly, patient, and professional demeanor</li>
+              <li>Basic computer literacy (email, scheduling, and notes)</li>
+              <li>Willingness to learn and adapt</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+              <li>Paid training and coaching</li>
+              <li>Supportive team environment</li>
+              <li>Opportunities to grow into office or admin roles</li>
+              <li>Competitive pay with steady hours</li>
+            </ul>
+              <a href="Application Form" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+    </div>
+           
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Repair Technician and heavy Machine Operator</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Full-Time | Onsite </h2>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 38/Hr</h3>
+        
+          <p class="mb-4">
+            Mr. Rol-Air is looking for a motivated Construction Foreman to lead our on-site crews and ensure smooth project execution. This is a great opportunity for someone with leadership qualities and a passion for construction. High school diploma or GED required — no prior experience necessary, we will train.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            You’ll work closely with project managers and tradespeople, supervising daily operations, maintaining safety standards, and ensuring timelines and quality are met. We provide hands-on training, mentorship, and a clear path to advancement.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+              <li>Physically fit and safety-conscious</li>
+              <li>Read and interpret blueprints and project plans</li>
+              <li>Maintain safety compliance and job site organization</li>
+              <li>Ensure quality workmanship and timely progress</li>
+              <li>Coordinate with subcontractors and material deliveries</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Requirements</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+              <li>High school diploma or GED</li>
+              <li>Working outdoors</li>
+              <li>Strong leadership and communication skills</li>
+              <li>Ability to follow schedules and direct a team</li>
+              <li>Basic knowledge of construction tools (Professional certificate is a plus)</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
+              <li>Foreman leadership</li>
+              <li>Steady, full-time hours with paid overtime opportunities</li>
+              <li>Supportive, family-like crew environment</li>
+              <li>Advancement path into Project Manager roles</li>
+            </ul>
+              <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+    </div>
+           
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Virtual Personal Assistant</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+          <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 30/Hr</h3>
+        
+          <p class="mb-4">
+            Mr. Rol-Air is hiring a detail-oriented Virtual Personal Assistant to support our daily business operations remotely. This role is ideal for organized individuals comfortable with computer-based work and remote communication.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            You'll assist with administrative tasks, manage emails and schedules, conduct basic research, and help coordinate meetings — all from the comfort of your home. No experience required; we provide full onboarding and digital tools training.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>Manage calendars, appointments, and reminders</li>
+              <li>Organize and respond to emails professionally</li>
+              <li>Help with online ordering, scheduling, and task lists</li>
+              <li>Conduct simple internet research and data entry</li>
+              <li>Assist in organizing digital files and communications</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>High school diploma or GED required</li>
+              <li>Basic computer and typing skills</li>
+              <li>Comfortable using email, calendars, and Google Docs/Sheets</li>
+              <li>Strong attention to detail and organization</li>
+              <li>Good communication and ability to work independently</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+              <li>Flexible remote schedule</li>
+              <li>Paid training and mentorship</li>
+              <li>Opportunity to grow into executive support or admin roles</li>
+              <li>Supportive team culture and real-time assistance</li>
+            </ul>
+              <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+      </div>
+</div>
+
+<div id="field" class="tab-content">
+        
+      <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Repair Technician and heavy Machine Operator</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Full-Time | Onsite </h2>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 38/Hr</h3>
+        
+          <p class="mb-4">
+            Mr. Rol-Air is looking for a motivated Construction Foreman to lead our on-site crews and ensure smooth project execution. This is a great opportunity for someone with leadership qualities and a passion for construction. High school diploma or GED required — no prior experience necessary, we will train.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            You’ll work closely with project managers and tradespeople, supervising daily operations, maintaining safety standards, and ensuring timelines and quality are met. We provide hands-on training, mentorship, and a clear path to advancement.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+              <li>Physically fit and safety-conscious</li>
+              <li>Read and interpret blueprints and project plans</li>
+              <li>Maintain safety compliance and job site organization</li>
+              <li>Ensure quality workmanship and timely progress</li>
+              <li>Coordinate with subcontractors and material deliveries</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Requirements</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+              <li>High school diploma or GED</li>
+              <li>Working outdoors</li>
+              <li>Strong leadership and communication skills</li>
+              <li>Ability to follow schedules and direct a team</li>
+              <li>Basic knowledge of construction tools (Professional certificate is a plus)</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
+              <li>Foreman leadership</li>
+              <li>Steady, full-time hours with paid overtime opportunities</li>
+              <li>Supportive, family-like crew environment</li>
+              <li>Advancement path into Project Manager roles</li>
+            </ul>
+              <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+    </div>
+</div>
+
+    
+<div id="office" class="tab-content">
+
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Virtual Personal Assistant</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+          <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 30/Hr</h3>
+        
+          <p class="mb-4">
+            Mr. Rol-Air is hiring a detail-oriented Virtual Personal Assistant to support our daily business operations remotely. This role is ideal for organized individuals comfortable with computer-based work and remote communication.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            You'll assist with administrative tasks, manage emails and schedules, conduct basic research, and help coordinate meetings — all from the comfort of your home. No experience required; we provide full onboarding and digital tools training.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>Manage calendars, appointments, and reminders</li>
+              <li>Organize and respond to emails professionally</li>
+              <li>Help with online ordering, scheduling, and task lists</li>
+              <li>Conduct simple internet research and data entry</li>
+              <li>Assist in organizing digital files and communications</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>High school diploma or GED required</li>
+              <li>Basic computer and typing skills</li>
+              <li>Comfortable using email, calendars, and Google Docs/Sheets</li>
+              <li>Strong attention to detail and organization</li>
+              <li>Good communication and ability to work independently</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+              <li>Flexible remote schedule</li>
+              <li>Paid training and mentorship</li>
+              <li>Opportunity to grow into executive support or admin roles</li>
+              <li>Supportive team culture and real-time assistance</li>
+            </ul>
+              <a href="Application Form" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+    </div>
+      
+
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+          <h1 class="text-3xl font-bold text-indigo-700 mb-2">Customer Service Representative</h1>
+          <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+          <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+          <h3 class="text-lg text-gray-600 mb-4">Pay: 23/Hr</h3>
+        
+          <p class="mb-4">
+            We're hiring a friendly and professional Customer Service Representative to be the first point of contact for our clients. No experience needed — we’ll provide full training.
+          </p>
+        
+          <p class="mb-4" x-show="showFull">
+            As part of our team, you’ll assist clients with questions about services, schedule appointments, and follow up on inquiries. This role is perfect for someone with strong communication skills who enjoys helping people and providing great service.
+          </p>
+        
+          <div x-show="showFull" x-transition>
+            <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>Answer phone calls and respond to emails in a professional manner</li>
+              <li>Assist clients with questions about construction and remodeling services</li>
+              <li>Schedule appointments and maintain up-to-date calendar entries</li>
+              <li>Log customer interactions and follow up on open cases</li>
+              <li>Collaborate with the office and construction teams</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>High school diploma or GED required</li>
+              <li>Strong communication and active listening skills</li>
+              <li>Friendly, patient, and professional demeanor</li>
+              <li>Basic computer literacy (email, scheduling, and notes)</li>
+              <li>Willingness to learn and adapt</li>
+            </ul>
+        
+            <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+              <li>Paid training and coaching</li>
+              <li>Supportive team environment</li>
+              <li>Opportunities to grow into office or admin roles</li>
+              <li>Competitive pay with steady hours</li>
+            </ul>
+              <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+        
+          <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+              <span x-show="!showFull">Read More</span>
+              <span x-show="showFull">Show Less</span>
+            </button>
+          </div>
+    </div>
+
+        
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+        <h1 class="text-3xl font-bold text-indigo-700 mb-2">Data Entry Clerk</h1>
+        <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+        <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+        <h3 class="text-lg text-gray-600 mb-4">Pay: 25/Hr</h3>
+      
+        <p class="mb-4">
+          We're looking for a detail-oriented Data Entry Clerk to support our growing operations team at Mr. Rol-Air.
+          No prior experience is required — we provide full training for the right candidate.
+        </p>
+      
+        <p class="mb-4" x-show="showFull">
+          This position is ideal for someone who is organized, accurate, and enjoys working behind the scenes to keep information flowing efficiently. You’ll handle a variety of admin support tasks including entering and updating job records, invoices, customer details, and supply logs.
+        </p>
+      
+        <div x-show="showFull" x-transition>
+          <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+            <li>Input data into internal systems with high accuracy</li>
+            <li>Verify, correct, and update digital records as needed</li>
+            <li>Assist with scanning, organizing, and filing digital documents</li>
+            <li>Communicate with internal teams to clarify or complete entries</li>
+            <li>Support admin team with other clerical tasks as needed</li>
+          </ul>
+      
+          <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+            <li>High school diploma or GED equivalent</li>
+            <li>Strong attention to detail and accuracy</li>
+            <li>Basic computer skills (typing, email, spreadsheets)</li>
+            <li>Ability to work independently and meet deadlines</li>
+            <li>Willingness to learn new tools and systems</li>
+          </ul>
+      
+          <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+            <li>Paid training and onboarding</li>
+            <li>Opportunities for advancement in administrative roles</li>
+            <li>Supportive team environment</li>
+            <li>Steady full-time schedule</li>
+          </ul>
+            <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+      
+        <div class="text-center mt-6">
+          <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+            <span x-show="!showFull">Read More</span>
+            <span x-show="showFull">Show Less</span>
+          </button>
+        </div>
+    </div>
+</div>
+        
+<div id="management" class="tab-content">
+   
+      <div class="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-12" x-data="{ showFull: false }">
+              <h1 class="text-3xl font-bold text-indigo-700 mb-2">Payroll Clerk</h1>
+              <h2 class="text-lg text-gray-600 mb-4">Entry-Level | Full-Time/ Part-Time</h2>
+              <h3 class="text-lg text-gray-600 mb-4">Remote</h3>
+              <h3 class="text-lg text-gray-600 mb-4">Pay: 28/Hr</h3>
+
+                <p class="mb-4">
+          Mr. Rol-Air is seeking a reliable and detail-oriented Payroll Clerk to join our team. In this role, you will help ensure accurate and timely payroll processing for our staff.
+                </p>
+      
+                <p class="mb-4" x-show="showFull">
+          No prior payroll experience is necessary — we provide full training. This is an excellent opportunity to begin or grow your career in administrative finance with a supportive and growing construction company.
+                </p>
+      
+            <!-- Hidden Content -->
+          `<div x-show="showFull" x-transition>
+              <h3 class="text-xl font-semibold mt-6 mb-2">Key Responsibilities</h3>
+            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+              <li>Assist with preparing and processing weekly and bi-weekly payroll</li>
+              <li>Maintain accurate records of employee hours and pay adjustments</li>
+              <li>Review timesheets and ensure data accuracy</li>
+              <li>Support payroll tax and deduction handling</li>
+              <li>Handle employee payroll questions respectfully and confidentially</li>
+          </ul>
+      
+            <h3 class="text-xl font-semibold mt-6 mb-2">Qualifications</h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+            <li>High school diploma or equivalent</li>
+            <li>Strong attention to detail and accuracy</li>
+            <li>Basic computer skills (Excel experience a plus)</li>
+            <li>Good organizational and communication skills</li>
+            <li>Trustworthy with sensitive information</li>
+          </ul>
+      
+          <h3 class="text-xl font-semibold mt-6 mb-2">What We Offer</h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-700 mb-6">
+            <li>Paid training and mentorship</li>
+            <li>Growth opportunities in admin or HR roles</li>
+            <li>Competitive pay and a supportive work environment</li>
+            <li>Paid time off and potential benefits</li>
+          </ul>
+            <a href="Application Form.html" target="_blank" class="bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 pulse-animation">Apply Now</a> </div>
+            
+          <!-- Toggle Button -->
+            <div class="text-center mt-6">
+            <button @click="showFull = !showFull" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition duration-300">
+            <span x-show="!showFull">Read More</span>
+            <span x-show="showFull">Show Less</span>
+          </button>
+            </div>
+      </div>
+  </div>
+</div>
+</section>
+
+  <script>
+    // Tab navigation logic
+    document.querySelectorAll(".tab-button").forEach(button => {
+      button.addEventListener("click", () => {
+        const tab = button.dataset.tab;
+
+        document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("text-green-600", "border-green-600", "active"));
+        button.classList.add("text-green-600", "border-green-600", "active");
+
+        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+        const target = document.getElementById(tab);
+        if (target) {
+          target.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
